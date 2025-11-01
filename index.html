@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Valentino's Ambos — Uniformes profesionales al por mayor, personalizados por rubro y con bordado de logo. Soluciones para clínicas, estéticas, geriátricos y empresas." />
+  <title>Valentino's Ambos — Uniformes profesionales</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Variables de color (fácil edición) */
+    :root{
+      --verde-oscuro: #023e51;
+      --verde: #279580;
+      --blanco: #ffffff;
+      --negro: #000000;
+      --azul-oscuro: #0f2839;
+      --verde-oliva: #1c818f;
+      --celeste: #3cabcb;
+      --rosa: #f01a64;
+      --glass: rgba(255,255,255,0.06);
+    }
+
+    /* Fuentes */
+    .font-head { font-family: 'Montserrat', sans-serif; }
+    .font-body { font-family: 'Poppins', sans-serif; }
+</style>
+</head>
+<body class="font-body text-white antialiased" style="background: var(--azul-oscuro);">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between glass">
+      <a href="#" class="flex items-center gap-3">
+        <img src="./img/logo.png" alt="Logo Valentino's Ambos" class="w-12 h-12 rounded-md object-cover">
+        <div>
+          <span class="block font-head text-lg">Valentino's Ambos</span>
+          <small class="block text-xs text-gray-300">Uniformes profesionales al por mayor</small>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#beneficios" class="hover:text-white text-gray-200">Qué ofrecemos</a>
+        <a href="#rubros" class="hover:text-white text-gray-200">Rubros</a>
+        <a href="#galeria" class="hover:text-white text-gray-200">Galería</a>
+        <a href="#testimonios" class="hover:text-white text-gray-200">Testimonios</a>
+        <a href="#contacto" class="ml-2 inline-block px-4 py-2 rounded-full text-sm font-semibold bg-[var(--verde)] hover:scale-105 transform transition">Solicitar presupuesto</a>
+      </div>
+
+      <!-- Mobile menu button (simple) -->
+      <div class="md:hidden">
+        <button id="btnMenu" aria-label="Abrir menú" class="p-2 rounded-md glass">
+          <svg xmlns="" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="hidden bg-[rgba(0,0,0,0.6)]">
+      <div class="px-6 py-4 flex flex-col gap-2">
+        <a href="#beneficios" class="py-2">Qué ofrecemos</a>
+        <a href="#rubros" class="py-2">Rubros</a>
+        <a href="#galeria" class="py-2">Galería</a>
+        <a href="#testimonios" class="py-2">Testimonios</a>
+        <a href="#contacto" class="py-2 font-semibold bg-[var(--verde)] rounded-lg text-center">Solicitar presupuesto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-[60vh] relative">
+    <div class="overlay absolute inset-0">
+        <div class="max-w-7xl mx-auto px-6 py-24 relative z-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto hero -->
+                <div>
+                    <h1 class="font-head text-4xl md:text-5xl leading-tight mb-4" data-animate>
+                        Equipamos la imagen de tu equipo con <span class="text-[var(--celeste)]">estilo</span> y <span class="text-[var(--rosa)]">profesionalismo</span>.
+                    </h1>
+                    <p class="text-gray-200 max-w-xl mb-6" data-animate>
+                        Diseñamos uniformes por rubro, personalizados con tu logo bordado. Soluciones mayoristas para clínicas, estéticas, geriátricos y empresas.
+                    </p>
+                <div class="flex flex-wrap gap-3" data-animate>
+                    <a href="#contacto" class="inline-block px-6 py-3 rounded-full bg-[var(--verde)] font-semibold shadow-lg hover:scale-105 transition transform">
+                    Solicitar presupuesto
+                    </a>
+                    <a href="https://wa.me/5491133856301" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-transparent ring-1 ring-[var(--celeste)] hover:bg-[rgba(60,188,203,0.08)] transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[var(--celeste)]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.52 3.48A11.966 11.966 0 0012 0C5.372 0 0 5.372 0 12a11.9 11.9 0 001.64 6.01L0 24l6.09-1.58A11.94 11.94 0 0012 24c6.628 0 12-5.372 12-12 0-3.2-1.25-6.13-3.48-8.52zM12 21.8c-1.84 0-3.62-.5-5.18-1.44l-.37-.22-3.62.94.96-3.54-.24-.37A9.78 9.78 0 012.2 12 9.8 9.8 0 0112 2.2c5.42 0 9.8 4.38 9.8 9.8 0 5.42-4.38 9.8-9.8 9.8z"/>
+                        <path d="M17.2 14.64c-.27-.13-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.13-.18.27-.71.88-.87 1.06-.16.18-.33.21-.61.07-.27-.13-1.13-.41-2.15-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.33.4-.5.13-.18.18-.33.27-.55.09-.22.04-.41-.02-.55-.06-.15-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.47l-.52-.01c-.18 0-.47.06-.72.33-.25.27-.95.93-.95 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.96 4.7 4.03 1.65.71 2.42.85 3.29.69.53-.09 1.6-.65 1.83-1.28.22-.63.22-1.17.16-1.28-.06-.12-.25-.18-.52-.31z"/>
+                    </svg>
+                    <span class="text-[var(--celeste)] font-medium">WhatsApp</span>
+                    </a>
+                </div>
+                    <div class="mt-6 text-sm text-gray-300" data-animate>
+                        <span class="inline-block mr-3">✅ Producción nacional</span>
+                        <span class="inline-block mr-3">✅ Bordado de logo</span>
+                        <span class="inline-block">✅ Envíos a todo el país</span>
+                    </div>
+                </div>
+
+                <!-- Hero image -->
+                <div class="relative flex items-center justify-center" data-animate>
+                    <div class="w-full max-w-md lg:max-w-full">
+                        <img 
+                        src="./img/banner.png" 
+                        alt="Equipo con uniformes profesionales"
+                        loading="lazy" 
+                        width="1024"
+                        height="1536"
+                        class="w-full h-auto max-h-[400px] lg:max-h-[800px] object-cover rounded-xl "
+                        />            
+                        <!-- <div class="mt-4 text-sm text-gray-300">Ejemplo de uniformes corporativos personalizados — imagen ilustrativa</div> -->
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-200 max-w-xl mb-4" data-animate>
+                ¿Sos profesional de la salud y querés certificarte como docente? Descubrí nuestros <span class="text-[var(--celeste)] font-semibold">tramos pedagógicos</span> con respaldo de la Universidad de la Salud.
+            </p>
+
+            <a href="#tramos" class="inline-block mt-2 px-6 py-3 rounded-full bg-[var(--celeste)] text-[var(--verde-oscuro)] font-semibold shadow-lg hover:scale-105 transition transform">
+                Conocé los tramos pedagógicos
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFICIOS / PROPOSICION DE VALOR -->
+  <section id="beneficios" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-head text-3xl mb-4" data-animate>Lo que ofrecemos</h2>
+        <p class="text-gray-300 mb-6" data-animate>Más que un uniforme: una solución de imagen profesional. Diseñamos y adaptamos cada conjunto para identificar la profesión, la especialización y la cultura de tu empresa.</p>
+
+        <ul class="grid sm:grid-cols-2 gap-4" aria-hidden="false">
+          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
+            <div class="p-2 rounded-md bg-[var(--celeste)]/10 text-[var(--celeste)]">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c2.761 0 5-2.239 5-5S14.761 1 12 1 7 3.239 7 6s2.239 5 5 5zM6 22a6 6 0 0112 0"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Diseño por rubro</h4>
+              <p class="text-sm text-gray-300">Estética, salud, geriatría, gastronomía y más — cada rubro con su patrón funcional y estético.</p>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
+            <div class="p-2 rounded-md bg-[var(--verde)]/10 text-[var(--verde)]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L1.605 6v12L12 24l10.395-6V6z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Logo bordado</h4>
+              <p class="text-sm text-gray-300">Refuerza la pertenencia del equipo y la imagen frente a clientes y pacientes.</p>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
+            <div class="p-2 rounded-md bg-[var(--rosa)]/10 text-[var(--rosa)]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M2 12l1.5 2 4-6 6 8 7-10L22 4"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Funcionalidad real</h4>
+              <p class="text-sm text-gray-300">Telas resistentes, cómodas y adaptadas a la jornada laboral de cada sector.</p>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
+            <div class="p-2 rounded-md bg-[var(--verde-oliva)]/10 text-[var(--verde-oliva)]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4zM4 10h10v2H4zM4 16h16v2H4z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Venta al por mayor</h4>
+              <p class="text-sm text-gray-300">Precios competitivos y logística pensada para instituciones.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Proceso visual -->
+      <div class="p-6 rounded-2xl glass" data-animate>
+        <h3 class="font-head text-2xl mb-4 accent-underline">Nuestro proceso</h3>
+        <ol class="space-y-4 text-gray-300">
+          <li class="flex gap-3 items-start">
+            <div class="w-10 h-10 rounded-full bg-[var(--celeste)]/10 flex items-center justify-center text-[var(--celeste)] font-semibold">1</div>
+            <div>
+              <strong>Asesoramiento por rubro</strong>
+              <div class="text-sm">Analizamos necesidades según tu actividad.</div>
+            </div>
+          </li>
+          <li class="flex gap-3 items-start">
+            <div class="w-10 h-10 rounded-full bg-[var(--verde)]/10 flex items-center justify-center text-[var(--verde)] font-semibold">2</div>
+            <div>
+              <strong>Propuesta personalizada</strong>
+              <div class="text-sm">Te enviamos modelos, telas y presupuesto mayorista.</div>
+            </div>
+          </li>
+          <li class="flex gap-3 items-start">
+            <div class="w-10 h-10 rounded-full bg-[var(--rosa)]/10 flex items-center justify-center text-[var(--rosa)] font-semibold">3</div>
+            <div>
+              <strong>Producción y control de calidad</strong>
+              <div class="text-sm">Cada lote pasa por control antes del envío.</div>
+            </div>
+          </li>
+          <li class="flex gap-3 items-start">
+            <div class="w-10 h-10 rounded-full bg-[var(--verde-oliva)]/10 flex items-center justify-center text-[var(--verde-oliva)] font-semibold">4</div>
+            <div>
+              <strong>Entrega y acompañamiento</strong>
+              <div class="text-sm">Coordinamos logística para recibir los uniformes en tiempo y forma.</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contador -->
+<section class="my-16 flex flex-col items-center">
+  <h2 class="text-2xl font-bold mb-6 text-center text-cyan-400 drop-shadow-neon-cyan">
+    Ambos entregados actualmente
+  </h2>
+
+  <div id="counter" class="text-4xl font-bold text-cyan-500 mt-2">
+    0
+  </div>
+</section>
+
+  <!-- ========================== -->
+<!-- SECCIÓN RUBROS -->
+<!-- ========================== -->
+<!-- Sección Rubros con scroll infinito real -->
+<section id="rubros" class="py-12 bg-[var(--verde-oscuro)] text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6">Nuestros Rubros</h2>
+
+    <div class="overflow-hidden relative">
+      <div id="rubros-loop" class="flex space-x-4 will-change-transform cursor-grab">
+        <!-- Rubros completos -->
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/cake.png" alt="Pastelería" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Pastelería</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/tooth.png" alt="Odontología" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Odontología</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/massage.png" alt="Masajes" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Masajes</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/spa.png" alt="Estética" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Estética</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/baby.png" alt="Pediatría" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Pediatría</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/hospital.png" alt="Cirugía" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Cirugía</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/?size=512w&id=561&format=png&color=FFFFFF" alt="Hotelería" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Hotelería</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/physiotherapy.png" alt="Kinesiología" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Kinesiología</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Internación Domiciliaria" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Internación Domiciliaria</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/broom.png" alt="Limpieza" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Limpieza</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/dog.png" alt="Veterinaria" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Veterinaria</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/pill.png" alt="Farmacia" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Farmacia</span>
+        </div>
+        <div class="flex-none w-32 h-32 bg-[var(--verde)] rounded-xl flex flex-col items-center justify-center">
+          <img src="https://img.icons8.com/?size=256w&id=6685&format=png&color=FFFFFF" alt="Geriatría" class="mb-2 w-12 h-12"/>
+          <span class="text-center font-medium">Geriatría</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== -->
+<!-- SECCIÓN GALERÍA DE TRABAJOS -->
+<!-- ========================== -->
+<section id="trabajos" class="py-20 bg-[var(--verde-oscuro)] text-[var(--blanco)]">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-[var(--celeste)]">
+      TENEMOS EL AMBO JUSTO PARA TU PROFESIÓN
+    </h2>
+
+    <div class="overflow-x-auto flex space-x-6 pb-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-[var(--verde)]">
+      <img src="./img/imgsNews/1.png" alt="Trabajo 1"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/2.png" alt="Trabajo 2"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/3.png" alt="Trabajo 3"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/4.png" alt="Trabajo 4"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/5.png" alt="Trabajo 5"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/6.png" alt="Trabajo 1"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/7.png" alt="Trabajo 2"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/8.png" alt="Trabajo 3"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <img src="./img/imgsNews/9.png" alt="Trabajo 4"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" />
+      <!-- <img src="./img/imgsNews/10.png" alt="Trabajo 5"
+        class="w-72 h-96 object-cover rounded-2xl snap-center shadow-lg hover:scale-105 transition-transform" /> -->
+    </div>
+  </div>
+</section>
+
+<!-- ========================== -->
+<!-- SECCIÓN CONFECCIÓN Y TALLER -->
+<!-- ========================== -->
+<section id="taller" class="py-20 bg-[var(--azul-oscuro)] text-[var(--blanco)]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+
+    <!-- Carrusel automático -->
+    <div class="relative w-full h-[400px] overflow-hidden rounded-2xl">
+      <div id="carousel" class="w-full h-full">
+        <img src="./img/taller/taller1.png" alt="Taller de confección 1"
+             class="absolute inset-0 w-full h-auto max-h-[600px] mx-auto object-contain opacity-100 transition-opacity duration-1000" />
+        <img src="./img/taller/taller2.png" alt="Taller de confección 2"
+             class="absolute inset-0 w-full h-auto max-h-[600px] mx-auto object-contain opacity-0 transition-opacity duration-1000" />
+        <img src="./img/taller/taller3.png" alt="Taller de confección 3"
+             class="absolute inset-0 w-full h-auto max-h-[600px] mx-auto object-contain opacity-0 transition-opacity duration-1000" />
+        <img src="./img/taller/taller4.png" alt="Taller de confección 4"
+             class="absolute inset-0 w-full h-auto max-h-[600px] mx-auto object-contain opacity-0 transition-opacity duration-1000" />
+        <img src="./img/taller/taller5.png" alt="Taller de confección 5"
+             class="absolute inset-0 w-full h-auto max-h-[600px] mx-auto object-contain opacity-0 transition-opacity duration-1000" />
+      </div>
+    </div>
+
+    <!-- Texto -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4 text-[var(--celeste)]">
+        Hechos con dedicación en nuestro taller
+      </h2>
+      <p class="text-gray-200 mb-6 leading-relaxed">
+        En <span class="text-[var(--rosa)] font-semibold">Valentino’s</span> confeccionamos cada uniforme en nuestro propio taller,
+        combinando materiales de alta calidad con procesos cuidados.  
+        Nuestra experiencia en corte, costura y bordado nos permite crear prendas cómodas,
+        duraderas y con terminaciones que reflejan profesionalismo.
+      </p>
+      <a href="#contacto"
+        class="inline-block bg-[var(--rosa)] text-[var(--blanco)] font-semibold px-6 py-3 rounded-xl hover:bg-[var(--celeste)] transition">
+        Pedí tu presupuesto
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================== -->
+<!-- SECCIÓN TRAMOS PEDAGÓGICOS -->
+<!-- ========================== -->
+<section id="pedagogia" class="py-20 bg-[var(--glass)] text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Título -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-[var(--celeste)] mb-2">Tramos pedagógicos para profesionales de la salud</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        Certifícate como docente y comparte tu experiencia en la salud con el respaldo de la Universidad de la Salud.
+      </p>
+    </div>
+
+    <!-- Cards de tramos -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/classroom.png" alt="Tramo 1" class="w-12 h-12 mx-auto"/>
+        <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Didáctica aplicada a la salud</h3>
+        <p class="text-gray-300 text-sm text-center">Aprende técnicas pedagógicas para planificar y dictar clases efectivas para profesionales de la salud.</p>
+      </div>
+
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/book.png" alt="Planificación de contenidos" class="w-12 h-12 mx-auto"/>
+        <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Planificación de contenidos</h3>
+        <p class="text-gray-300 text-sm text-center">Organiza y estructura tus clases con herramientas y metodologías modernas de enseñanza.</p>
+      </div>
+
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whiteboard.png" alt="Tramo 3" class="w-12 h-12 mx-auto"/>
+        <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Evaluación y feedback</h3>
+        <p class="text-gray-300 text-sm text-center">Aprende a evaluar aprendizajes y brindar retroalimentación constructiva a tus estudiantes.</p>
+      </div>
+
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/certificate.png" alt="Tramo 4" class="w-12 h-12 mx-auto"/>
+        <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Herramientas digitales</h3>
+        <p class="text-gray-300 text-sm text-center">Incorpora tecnología y recursos digitales para la enseñanza de manera práctica y efectiva.</p>
+      </div>
+
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/university.png" alt="Tramo 5" class="w-12 h-12 mx-auto"/>
+        <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Certificación oficial</h3>
+        <p class="text-gray-300 text-sm text-center">Recibí tu certificado avalado por la Universidad de la Salud y acredita tu formación pedagógica.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- === SECCIÓN TESTIMONIOS === -->
+<section id="testimonios" class="py-16 bg-[var(--verde-oscuro)] text-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8 text-white">Testimonios de nuestros clientes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Testimonio 1 -->
+      <div class="bg-[var(--azul-oscuro)] text-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-center mb-3">
+          <img src="https://i.pravatar.cc/80?img=12" alt="Cliente 1" class="w-16 h-16 rounded-full border-2 border-gray-300" />
+        </div>
+        <p class="text-gray-300 italic mb-4">“Excelente atención y calidad en cada prenda. Totalmente recomendables.”</p>
+        <div class="flex justify-center mb-2">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h4 class="font-semibold text-gray-800">Laura Fernández</h4>
+      </div>
+
+      <!-- Testimonio 2 -->
+      <div class="bg-[var(--azul-oscuro)] text-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-center mb-3">
+          <img src="https://i.pravatar.cc/80?img=22" alt="Cliente 2" class="w-16 h-16 rounded-full border-2 border-gray-300" />
+        </div>
+        <p class="text-gray-300 italic mb-4">“Los uniformes quedaron perfectos y el envío fue rapidísimo. Muy profesionales.”</p>
+        <div class="flex justify-center mb-2">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h4 class="font-semibold text-gray-800">Martín Acosta</h4>
+      </div>
+
+      <!-- Testimonio 3 -->
+      <div class="bg-[var(--azul-oscuro)] text-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-center mb-3">
+          <img src="https://i.pravatar.cc/80?img=33" alt="Cliente 3" class="w-16 h-16 rounded-full border-2 border-gray-300" />
+        </div>
+        <p class="text-gray-300 italic mb-4">“Excelente calidad de telas y confección. Se nota la dedicación en cada detalle.”</p>
+        <div class="flex justify-center mb-2">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h4 class="font-semibold text-gray-800">Romina Duarte</h4>
+      </div>
+
+      <!-- Testimonio 4 -->
+      <div class="bg-[var(--azul-oscuro)] text-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-center mb-3">
+          <img src="https://i.pravatar.cc/80?img=44" alt="Cliente 4" class="w-16 h-16 rounded-full border-2 border-gray-300" />
+        </div>
+        <p class="text-gray-300 italic mb-4">“Atención personalizada y productos de primera. Los recomiendo sin dudar.”</p>
+        <div class="flex justify-center mb-2">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h4 class="font-semibold text-gray-800">Carlos Pérez</h4>
+      </div>
+
+      <!-- Testimonio 5 -->
+      <div class="bg-[var(--azul-oscuro)] text-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+        <div class="flex justify-center mb-3">
+          <img src="https://i.pravatar.cc/80?img=55" alt="Cliente 5" class="w-16 h-16 rounded-full border-2 border-gray-300" />
+        </div>
+        <p class="text-gray-300 italic mb-4">“Muy buena comunicación y resultados excelentes. Volveré a comprar sin dudar.”</p>
+        <div class="flex justify-center mb-2">
+          <span class="text-yellow-400 text-xl">★★★★★</span>
+        </div>
+        <h4 class="font-semibold text-gray-800">María López</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA + FORMULARIO -->
+<section id="contacto" class="max-w-2xl mx-auto px-6 py-20">
+  <div class="p-8 rounded-2xl glass flex flex-col gap-6">
+    <!-- Título y texto -->
+    <div class="text-center md:text-left">
+      <h2 class="font-head text-2xl md:text-3xl mb-2">Solicitá tu presupuesto mayorista</h2>
+      <p class="text-gray-300 text-sm md:text-base">
+        Completá el formulario y te contactamos en menos de 24 horas. También podés escribirnos por WhatsApp.
+      </p>
+    </div>
+
+    <!-- Formulario -->
+    <form onsubmit="enviarWhatsApp(event)" class="flex flex-col gap-4">
+      <input 
+        id="nombre" 
+        placeholder="Tu nombre" 
+        required 
+        class="w-full px-4 py-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-[var(--celeste)]" />
+      
+      <input 
+        id="empresa" 
+        placeholder="Empresa o rubro" 
+        class="w-full px-4 py-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-[var(--celeste)]" />
+      
+      <input 
+        id="cantidad" 
+        placeholder="Cantidad aproximada" 
+        class="w-full px-4 py-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-[var(--celeste)]" />
+      
+      <button 
+        type="submit" 
+        class="w-full bg-[var(--celeste)] text-[var(--verde-oscuro)] font-bold py-3 rounded-lg hover:bg-[var(--verde)] transition-colors">
+        Enviar por WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--azul-oscuro)] text-gray-400 py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <strong>Valentino's Ambos</strong>
+        <div class="text-sm text-gray-400">Producción nacional · Bordado · Venta mayorista</div>
+      </div>
+
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-white">Instagram</a>
+        <a href="#" class="hover:text-white">Facebook</a>
+        <a href="#" class="hover:text-white">WhatsApp</a>
+      </div>
+
+      <div class="text-sm text-gray-400">
+        © <span id="year"></span> Valentino's Ambos. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/5491133856301" target="_blank" rel="noopener" aria-label="WhatsApp" class="fixed bottom-6 right-6 z-50 whatsapp-float p-4 rounded-full flex items-center gap-3 text-white shadow-lg hover:scale-105 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.966 11.966 0 0012 0C5.372 0 0 5.372 0 12a11.9 11.9 0 001.64 6.01L0 24l6.09-1.58A11.94 11.94 0 0012 24c6.628 0 12-5.372 12-12 0-3.2-1.25-6.13-3.48-8.52zM12 21.8c-1.84 0-3.62-.5-5.18-1.44l-.37-.22-3.62.94.96-3.54-.24-.37A9.78 9.78 0 012.2 12 9.8 9.8 0 0112 2.2c5.42 0 9.8 4.38 9.8 9.8 0 5.42-4.38 9.8-9.8 9.8z"/><path d="M17.2 14.64c-.27-.13-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.13-.18.27-.71.88-.87 1.06-.16.18-.33.21-.61.07-.27-.13-1.13-.41-2.15-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.33.4-.5.13-.18.18-.33.27-.55.09-.22.04-.41-.02-.55-.06-.15-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.47l-.52-.01c-.18 0-.47.06-.72.33-.25.27-.95.93-.95 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.96 4.7 4.03 1.65.71 2.42.85 3.29.69.53-.09 1.6-.65 1.83-1.28.22-.63.22-1.17.16-1.28-.06-.12-.25-.18-.52-.31z"/></svg>
+    <span class="hidden sm:inline">Escribinos</span>
+  </a>
+
+
+<!-- === CARRUSELES AUTOMÁTICOS (CORREGIDO PARA TU HTML) === -->
+<script>
+
+  const counter = document.getElementById("counter");
+  let counted = false; // Para que solo cuente una vez
+
+  function animateCounter() {
+    const top = counter.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight && !counted) {
+      counted = true;
+      let start = 0;
+      const end = 671;
+      const duration = 2000; // 2 segundos
+      const stepTime = Math.floor(duration / end);
+
+      const timer = setInterval(() => {
+        start += 1;
+        counter.innerText = start;
+        if (start >= end) clearInterval(timer);
+      }, stepTime);
+    }
+  }
+
+  window.addEventListener("scroll", animateCounter);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  /* ---------------------------
+     1) RUBROS - cinta infinita
+     --------------------------- */
+  (function initRubros() {
+    const track = document.getElementById('rubros-loop');
+    if (!track) return;
+
+    // Evitar duplicados si ya se ejecutó
+    if (!track.dataset.infinite) {
+      // duplicamos los elementos para que el scroll parezca infinito
+      const children = Array.from(track.children);
+      children.forEach(node => track.appendChild(node.cloneNode(true)));
+      track.dataset.infinite = 'true';
+    }
+
+    // Inicializaciones
+    let pos = 0;
+    const speed = 0.4; // píxels por frame — ajustá para acelerar/ralentizar
+    track.style.transform = 'translateX(0px)';
+    track.style.willChange = 'transform';
+    track.style.display = 'flex'; // por las dudas
+
+    // Calcula el ancho "mitad" (contenido original) para resetear
+    function getResetWidth() {
+      // la mitad del scrollWidth corresponde al contenido original tras duplicar
+      return track.scrollWidth / 2;
+    }
+
+    let resetWidth = getResetWidth();
+
+    // Recalcular si se redimensiona (responsive)
+    window.addEventListener('resize', () => {
+      resetWidth = getResetWidth();
+    });
+
+    // Animación
+    let rafId;
+    function step() {
+      pos += speed;
+      if (pos >= resetWidth) pos = 0;
+      track.style.transform = `translateX(-${pos}px)`;
+      rafId = requestAnimationFrame(step);
+    }
+
+    // arrancar
+    step();
+
+    // opcional: pausar si el usuario pone el mouse encima (puede ser útil)
+    track.addEventListener('mouseenter', () => cancelAnimationFrame(rafId));
+    track.addEventListener('mouseleave', () => { rafId = requestAnimationFrame(step); });
+  })();
+
+
+  /* ---------------------------
+     2) TALLER - carrusel fade automático
+     --------------------------- */
+  (function initTaller() {
+    const carousel = document.getElementById('carousel');
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll('img'));
+    if (!slides.length) return;
+
+    // Estilos requeridos para la transición (por si no están)
+    slides.forEach((s, i) => {
+      s.style.position = 'absolute';
+      s.style.inset = '0';
+      s.style.left = '50%';
+      s.style.transform = 'translateX(-50%)';
+      s.style.width = 'auto';
+      s.style.maxWidth = '100%';
+      s.style.maxHeight = '600px';
+      s.style.transition = 'opacity 900ms ease';
+      s.style.opacity = i === 0 ? '1' : '0';
+      s.style.objectFit = 'contain';
+      s.style.pointerEvents = 'none';
+    });
+
+    let current = 0;
+    const total = slides.length;
+    const delay = 4000; // ms entre slides
+
+    function goTo(next) {
+      slides[current].style.opacity = '0';
+      slides[next].style.opacity = '1';
+      current = next;
+    }
+
+    // interval automático
+    let intervalId = setInterval(() => {
+      const next = (current + 1) % total;
+      goTo(next);
+    }, delay);
+
+    // opcional: pausar al hover (si movés el mouse sobre la sección)
+    carousel.addEventListener('mouseenter', () => clearInterval(intervalId));
+    carousel.addEventListener('mouseleave', () => {
+      clearInterval(intervalId);
+      intervalId = setInterval(() => {
+        const next = (current + 1) % total;
+        goTo(next);
+      }, delay);
+    });
+  })();
+
+}); // DOMContentLoaded
+</script>
+
+  
+
+
+  </body>
+</html>
