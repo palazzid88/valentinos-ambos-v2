@@ -34,7 +34,7 @@
 <body class="font-body text-white antialiased" style="background: var(--azul-oscuro);">
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50">
+  <header class="sticky top-0 z-50 bg-[var(--verde)]">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between glass">
       <a href="#" class="flex items-center gap-3">
         <img src="./img/logo.png" alt="Logo Valentino's Ambos" class="w-12 h-12 rounded-md object-cover">
@@ -44,7 +44,7 @@
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-6">
+      <div class="hidden md:flex items-center gap-6 ">
         <a href="#beneficios" class="hover:text-white text-gray-200">Qué ofrecemos</a>
         <a href="#rubros" class="hover:text-white text-gray-200">Rubros</a>
         <a href="#galeria" class="hover:text-white text-gray-200">Galería</a>
@@ -72,151 +72,163 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero-bg min-h-[60vh] relative">
-    <div class="overlay absolute inset-0">
-        <div class="max-w-7xl mx-auto px-6 py-24 relative z-20">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Texto hero -->
-                <div>
-                    <h1 class="font-head text-4xl md:text-5xl leading-tight mb-4" data-animate>
-                        Equipamos la imagen de tu equipo con <span class="text-[var(--celeste)]">estilo</span> y <span class="text-[var(--rosa)]">profesionalismo</span>.
-                    </h1>
-                    <p class="text-gray-200 max-w-xl mb-6" data-animate>
-                        Diseñamos uniformes por rubro, personalizados con tu logo bordado. Soluciones mayoristas para clínicas, estéticas, geriátricos y empresas.
-                    </p>
-                <div class="flex flex-wrap gap-3" data-animate>
-                    <a href="#contacto" class="inline-block px-6 py-3 rounded-full bg-[var(--verde)] font-semibold shadow-lg hover:scale-105 transition transform">
-                    Solicitar presupuesto
-                    </a>
-                    <a href="https://wa.me/5491133856301" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-transparent ring-1 ring-[var(--celeste)] hover:bg-[rgba(60,188,203,0.08)] transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[var(--celeste)]" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.52 3.48A11.966 11.966 0 0012 0C5.372 0 0 5.372 0 12a11.9 11.9 0 001.64 6.01L0 24l6.09-1.58A11.94 11.94 0 0012 24c6.628 0 12-5.372 12-12 0-3.2-1.25-6.13-3.48-8.52zM12 21.8c-1.84 0-3.62-.5-5.18-1.44l-.37-.22-3.62.94.96-3.54-.24-.37A9.78 9.78 0 012.2 12 9.8 9.8 0 0112 2.2c5.42 0 9.8 4.38 9.8 9.8 0 5.42-4.38 9.8-9.8 9.8z"/>
-                        <path d="M17.2 14.64c-.27-.13-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.13-.18.27-.71.88-.87 1.06-.16.18-.33.21-.61.07-.27-.13-1.13-.41-2.15-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.33.4-.5.13-.18.18-.33.27-.55.09-.22.04-.41-.02-.55-.06-.15-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.47l-.52-.01c-.18 0-.47.06-.72.33-.25.27-.95.93-.95 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.96 4.7 4.03 1.65.71 2.42.85 3.29.69.53-.09 1.6-.65 1.83-1.28.22-.63.22-1.17.16-1.28-.06-.12-.25-.18-.52-.31z"/>
-                    </svg>
-                    <span class="text-[var(--celeste)] font-medium">WhatsApp</span>
-                    </a>
-                </div>
-                    <div class="mt-6 text-sm text-gray-300" data-animate>
-                        <span class="inline-block mr-3">✅ Producción nacional</span>
-                        <span class="inline-block mr-3">✅ Bordado de logo</span>
-                        <span class="inline-block">✅ Envíos a todo el país</span>
-                    </div>
-                </div>
+<!-- HERO ANIMADO -->
+<section class="hero-bg relative lg:min-h-[60vh] py-16 lg:py-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Texto hero -->
+      <div class="order-1 space-y-6">
+        <h1 class="font-head text-4xl md:text-5xl leading-tight opacity-0 translate-y-8 transition-all duration-1000 ease-out" data-animate>
+          Equipamos la imagen de tu equipo con <span class="text-[var(--celeste)]">estilo</span> y <span class="text-[var(--rosa)]">profesionalismo</span>.
+        </h1>
 
-                <!-- Hero image -->
-                <div class="relative flex items-center justify-center" data-animate>
-                    <div class="w-full max-w-md lg:max-w-full">
-                        <img 
-                        src="./img/banner.png" 
-                        alt="Equipo con uniformes profesionales"
-                        loading="lazy" 
-                        width="1024"
-                        height="1536"
-                        class="w-full h-auto max-h-[400px] lg:max-h-[800px] object-cover rounded-xl "
-                        />            
-                        <!-- <div class="mt-4 text-sm text-gray-300">Ejemplo de uniformes corporativos personalizados — imagen ilustrativa</div> -->
-                    </div>
-                </div>
-            </div>
-            <p class="text-gray-200 max-w-xl mb-4" data-animate>
-                ¿Sos profesional de la salud y querés certificarte como docente? Descubrí nuestros <span class="text-[var(--celeste)] font-semibold">tramos pedagógicos</span> con respaldo de la Universidad de la Salud.
-            </p>
+        <p class="text-gray-200 max-w-xl opacity-0 translate-y-8 transition-all duration-1000 delay-100 ease-out" data-animate>
+          Diseñamos uniformes por rubro, personalizados con tu logo bordado. Soluciones mayoristas para clínicas, estéticas, geriátricos y empresas.
+        </p>
 
-            <a href="#tramos" class="inline-block mt-2 px-6 py-3 rounded-full bg-[var(--celeste)] text-[var(--verde-oscuro)] font-semibold shadow-lg hover:scale-105 transition transform">
-                Conocé los tramos pedagógicos
-            </a>
+        <div class="flex flex-wrap gap-3 opacity-0 translate-y-8 transition-all duration-1000 delay-200 ease-out" data-animate>
+          <a href="#contacto" class="inline-block px-6 py-3 rounded-full bg-[var(--verde)] font-semibold shadow-lg hover:scale-105 transition transform">
+            Solicitar presupuesto
+          </a>
+          <a href="https://wa.me/5491133856301" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-transparent ring-1 ring-[var(--celeste)] hover:bg-[rgba(60,188,203,0.08)] transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[var(--celeste)]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.52 3.48A11.966 11.966 0 0012 0C5.372 0 0 5.372 0 12a11.9 11.9 0 001.64 6.01L0 24l6.09-1.58A11.94 11.94 0 0012 24c6.628 0 12-5.372 12-12 0-3.2-1.25-6.13-3.48-8.52zM12 21.8c-1.84 0-3.62-.5-5.18-1.44l-.37-.22-3.62.94.96-3.54-.24-.37A9.78 9.78 0 012.2 12 9.8 9.8 0 0112 2.2c5.42 0 9.8 4.38 9.8 9.8 0 5.42-4.38 9.8-9.8 9.8z"/>
+              <path d="M17.2 14.64c-.27-.13-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.13-.18.27-.71.88-.87 1.06-.16.18-.33.21-.61.07-.27-.13-1.13-.41-2.15-1.33-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.33.4-.5.13-.18.18-.33.27-.55.09-.22.04-.41-.02-.55-.06-.15-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.47l-.52-.01c-.18 0-.47.06-.72.33-.25.27-.95.93-.95 2.27 0 1.34.98 2.64 1.12 2.82.14.18 1.94 2.96 4.7 4.03 1.65.71 2.42.85 3.29.69.53-.09 1.6-.65 1.83-1.28.22-.63.22-1.17.16-1.28-.06-.12-.25-.18-.52-.31z"/>
+            </svg>
+            <span class="text-[var(--celeste)] font-medium">WhatsApp</span>
+          </a>
         </div>
+
+        <div class="text-sm text-gray-300 opacity-0 translate-y-8 transition-all duration-1000 delay-300 ease-out" data-animate>
+          <span class="inline-block mr-3">✅ Producción nacional</span>
+          <span class="inline-block mr-3">✅ Bordado de logo</span>
+          <span class="inline-block">✅ Envíos a todo el país</span>
+        </div>
+      </div>
+
+      <!-- Imagen hero -->
+      <div class="order-2 opacity-0 scale-95 transition-all duration-1000 delay-400 ease-out" data-animate>
+        <img 
+          src="./img/banner.png" 
+          alt="Equipo con uniformes profesionales"
+          class="w-full h-auto rounded-xl shadow-lg object-cover object-center"
+        />
+      </div>
     </div>
+
+    <!-- CTA tramos pedagógicos -->
+    <div class="mt-12 text-center opacity-0 translate-y-8 transition-all duration-1000 delay-500 ease-out" data-animate>
+      <p class="text-gray-200 max-w-xl mx-auto mb-4">
+        ¿Sos profesional de la salud y querés certificarte como docente? Descubrí nuestros <span class="text-[var(--celeste)] font-semibold">tramos pedagógicos</span> con respaldo de la Universidad de la Salud.
+      </p>
+      <a href="#pedagogia" class="inline-block px-6 py-3 rounded-full bg-[var(--celeste)] text-[var(--verde-oscuro)] font-semibold shadow-lg hover:scale-105 transition transform">
+        Conocé los tramos pedagógicos
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- BENEFICIOS / PROPOSICION DE VALOR -->
-  <section id="beneficios" class="max-w-7xl mx-auto px-6 py-20">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="font-head text-3xl mb-4" data-animate>Lo que ofrecemos</h2>
-        <p class="text-gray-300 mb-6" data-animate>Más que un uniforme: una solución de imagen profesional. Diseñamos y adaptamos cada conjunto para identificar la profesión, la especialización y la cultura de tu empresa.</p>
+<br>
+<br>
 
-        <ul class="grid sm:grid-cols-2 gap-4" aria-hidden="false">
-          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
-            <div class="p-2 rounded-md bg-[var(--celeste)]/10 text-[var(--celeste)]">
-              <!-- icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c2.761 0 5-2.239 5-5S14.761 1 12 1 7 3.239 7 6s2.239 5 5 5zM6 22a6 6 0 0112 0"/></svg>
-            </div>
-            <div>
-              <h4 class="font-semibold">Diseño por rubro</h4>
-              <p class="text-sm text-gray-300">Estética, salud, geriatría, gastronomía y más — cada rubro con su patrón funcional y estético.</p>
-            </div>
-          </li>
+<!-- BENEFICIOS / PROPOSICION DE VALOR ANIMADA -->
+<section id="beneficios" class="max-w-7xl mx-auto px-6 py-20">
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+    
+    <!-- Texto y beneficios -->
+    <div class="space-y-6">
+      <h2 class="font-head text-3xl opacity-0 translate-y-8 transition-all duration-1000 ease-out" data-animate>Lo que ofrecemos</h2>
+      <p class="text-gray-300 opacity-0 translate-y-8 transition-all duration-1000 delay-100 ease-out" data-animate>
+        Más que un uniforme: una solución de imagen profesional. Diseñamos y adaptamos cada conjunto para identificar la profesión, la especialización y la cultura de tu empresa.
+      </p>
 
-          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
-            <div class="p-2 rounded-md bg-[var(--verde)]/10 text-[var(--verde)]">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L1.605 6v12L12 24l10.395-6V6z"/></svg>
-            </div>
-            <div>
-              <h4 class="font-semibold">Logo bordado</h4>
-              <p class="text-sm text-gray-300">Refuerza la pertenencia del equipo y la imagen frente a clientes y pacientes.</p>
-            </div>
-          </li>
+      <ul class="grid sm:grid-cols-2 gap-4">
+        <li class="flex items-start gap-3 p-4 glass rounded-lg opacity-0 translate-y-8 transition-all duration-1000 delay-200 ease-out" data-animate>
+          <div class="p-2 rounded-md bg-[var(--celeste)]/10 text-[var(--celeste)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c2.761 0 5-2.239 5-5S14.761 1 12 1 7 3.239 7 6s2.239 5 5 5zM6 22a6 6 0 0112 0"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold">Diseño por rubro</h4>
+            <p class="text-sm text-gray-300">Estética, salud, geriatría, gastronomía y más — cada rubro con su patrón funcional y estético.</p>
+          </div>
+        </li>
 
-          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
-            <div class="p-2 rounded-md bg-[var(--rosa)]/10 text-[var(--rosa)]">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M2 12l1.5 2 4-6 6 8 7-10L22 4"/></svg>
-            </div>
-            <div>
-              <h4 class="font-semibold">Funcionalidad real</h4>
-              <p class="text-sm text-gray-300">Telas resistentes, cómodas y adaptadas a la jornada laboral de cada sector.</p>
-            </div>
-          </li>
+        <li class="flex items-start gap-3 p-4 glass rounded-lg opacity-0 translate-y-8 transition-all duration-1000 delay-300 ease-out" data-animate>
+          <div class="p-2 rounded-md bg-[var(--verde)]/10 text-[var(--verde)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0L1.605 6v12L12 24l10.395-6V6z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold">Logo bordado</h4>
+            <p class="text-sm text-gray-300">Refuerza la pertenencia del equipo y la imagen frente a clientes y pacientes.</p>
+          </div>
+        </li>
 
-          <li class="flex items-start gap-3 p-4 glass rounded-lg" data-animate>
-            <div class="p-2 rounded-md bg-[var(--verde-oliva)]/10 text-[var(--verde-oliva)]">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4zM4 10h10v2H4zM4 16h16v2H4z"/></svg>
-            </div>
-            <div>
-              <h4 class="font-semibold">Venta al por mayor</h4>
-              <p class="text-sm text-gray-300">Precios competitivos y logística pensada para instituciones.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+        <li class="flex items-start gap-3 p-4 glass rounded-lg opacity-0 translate-y-8 transition-all duration-1000 delay-400 ease-out" data-animate>
+          <div class="p-2 rounded-md bg-[var(--rosa)]/10 text-[var(--rosa)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 12l1.5 2 4-6 6 8 7-10L22 4"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold">Funcionalidad real</h4>
+            <p class="text-sm text-gray-300">Telas resistentes, cómodas y adaptadas a la jornada laboral de cada sector.</p>
+          </div>
+        </li>
 
-      <!-- Proceso visual -->
-      <div class="p-6 rounded-2xl glass" data-animate>
-        <h3 class="font-head text-2xl mb-4 accent-underline">Nuestro proceso</h3>
-        <ol class="space-y-4 text-gray-300">
-          <li class="flex gap-3 items-start">
-            <div class="w-10 h-10 rounded-full bg-[var(--celeste)]/10 flex items-center justify-center text-[var(--celeste)] font-semibold">1</div>
-            <div>
-              <strong>Asesoramiento por rubro</strong>
-              <div class="text-sm">Analizamos necesidades según tu actividad.</div>
-            </div>
-          </li>
-          <li class="flex gap-3 items-start">
-            <div class="w-10 h-10 rounded-full bg-[var(--verde)]/10 flex items-center justify-center text-[var(--verde)] font-semibold">2</div>
-            <div>
-              <strong>Propuesta personalizada</strong>
-              <div class="text-sm">Te enviamos modelos, telas y presupuesto mayorista.</div>
-            </div>
-          </li>
-          <li class="flex gap-3 items-start">
-            <div class="w-10 h-10 rounded-full bg-[var(--rosa)]/10 flex items-center justify-center text-[var(--rosa)] font-semibold">3</div>
-            <div>
-              <strong>Producción y control de calidad</strong>
-              <div class="text-sm">Cada lote pasa por control antes del envío.</div>
-            </div>
-          </li>
-          <li class="flex gap-3 items-start">
-            <div class="w-10 h-10 rounded-full bg-[var(--verde-oliva)]/10 flex items-center justify-center text-[var(--verde-oliva)] font-semibold">4</div>
-            <div>
-              <strong>Entrega y acompañamiento</strong>
-              <div class="text-sm">Coordinamos logística para recibir los uniformes en tiempo y forma.</div>
-            </div>
-          </li>
-        </ol>
-      </div>
+        <li class="flex items-start gap-3 p-4 glass rounded-lg opacity-0 translate-y-8 transition-all duration-1000 delay-500 ease-out" data-animate>
+          <div class="p-2 rounded-md bg-[var(--verde-oliva)]/10 text-[var(--verde-oliva)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 4h16v2H4zM4 10h10v2H4zM4 16h16v2H4z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold">Venta al por mayor</h4>
+            <p class="text-sm text-gray-300">Precios competitivos y logística pensada para instituciones.</p>
+          </div>
+        </li>
+      </ul>
     </div>
-  </section>
+
+    <!-- Proceso visual -->
+    <div class="p-6 rounded-2xl glass opacity-0 translate-y-8 transition-all duration-1000 delay-600 ease-out" data-animate>
+      <h3 class="font-head text-2xl mb-4 accent-underline">Nuestro proceso</h3>
+      <ol class="space-y-4 text-gray-300">
+        <li class="flex gap-3 items-start">
+          <div class="w-10 h-10 rounded-full bg-[var(--celeste)]/10 flex items-center justify-center text-[var(--celeste)] font-semibold">1</div>
+          <div>
+            <strong>Asesoramiento por rubro</strong>
+            <div class="text-sm">Analizamos necesidades según tu actividad.</div>
+          </div>
+        </li>
+        <li class="flex gap-3 items-start">
+          <div class="w-10 h-10 rounded-full bg-[var(--verde)]/10 flex items-center justify-center text-[var(--verde)] font-semibold">2</div>
+          <div>
+            <strong>Propuesta personalizada</strong>
+            <div class="text-sm">Te enviamos modelos, telas y presupuesto mayorista.</div>
+          </div>
+        </li>
+        <li class="flex gap-3 items-start">
+          <div class="w-10 h-10 rounded-full bg-[var(--rosa)]/10 flex items-center justify-center text-[var(--rosa)] font-semibold">3</div>
+          <div>
+            <strong>Producción y control de calidad</strong>
+            <div class="text-sm">Cada lote pasa por control antes del envío.</div>
+          </div>
+        </li>
+        <li class="flex gap-3 items-start">
+          <div class="w-10 h-10 rounded-full bg-[var(--verde-oliva)]/10 flex items-center justify-center text-[var(--verde-oliva)] font-semibold">4</div>
+          <div>
+            <strong>Entrega y acompañamiento</strong>
+            <div class="text-sm">Coordinamos logística para recibir los uniformes en tiempo y forma.</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
 
   <!-- Contador -->
 <section class="my-16 flex flex-col items-center">
@@ -338,8 +350,8 @@
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
 
     <!-- Carrusel automático -->
-    <div class="relative w-full h-[400px] overflow-hidden rounded-2xl">
-      <div id="carousel" class="w-full h-full">
+    <div class="relative w-full h-[400px] overflow-hidden rounded-2xl opacity-0 translate-y-8 transition-all duration-1000 ease-out" data-animate>
+      <div id="carousel" class="w-full h-full relative">
         <img src="./img/taller/taller1.png" alt="Taller de confección 1"
              class="absolute inset-0 w-full h-auto max-h-[600px] mx-auto object-contain opacity-100 transition-opacity duration-1000" />
         <img src="./img/taller/taller2.png" alt="Taller de confección 2"
@@ -354,7 +366,7 @@
     </div>
 
     <!-- Texto -->
-    <div>
+    <div class="opacity-0 translate-y-8 transition-all duration-1000 delay-200 ease-out" data-animate>
       <h2 class="text-3xl font-bold mb-4 text-[var(--celeste)]">
         Hechos con dedicación en nuestro taller
       </h2>
@@ -379,7 +391,7 @@
 <section id="pedagogia" class="py-20 bg-[var(--glass)] text-white">
   <div class="max-w-7xl mx-auto px-6">
     <!-- Título -->
-    <div class="text-center mb-12">
+    <div class="text-center mb-12 opacity-0 translate-y-8 transition-all duration-1000 ease-out" data-animate>
       <h2 class="text-3xl font-bold text-[var(--celeste)] mb-2">Tramos pedagógicos para profesionales de la salud</h2>
       <p class="text-gray-300 max-w-2xl mx-auto">
         Certifícate como docente y comparte tu experiencia en la salud con el respaldo de la Universidad de la Salud.
@@ -389,39 +401,71 @@
     <!-- Cards de tramos -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       
-      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg opacity-0 translate-y-8 transition-all duration-1000 delay-100 ease-out" data-animate>
         <img src="https://img.icons8.com/ios-filled/50/ffffff/classroom.png" alt="Tramo 1" class="w-12 h-12 mx-auto"/>
         <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Didáctica aplicada a la salud</h3>
         <p class="text-gray-300 text-sm text-center">Aprende técnicas pedagógicas para planificar y dictar clases efectivas para profesionales de la salud.</p>
       </div>
 
-      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/book.png" alt="Planificación de contenidos" class="w-12 h-12 mx-auto"/>
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg opacity-0 translate-y-8 transition-all duration-1000 delay-200 ease-out" data-animate>
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/book.png" alt="Planificación de contenidos" class="w-12 h-12 mx-auto"/>
         <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Planificación de contenidos</h3>
         <p class="text-gray-300 text-sm text-center">Organiza y estructura tus clases con herramientas y metodologías modernas de enseñanza.</p>
       </div>
 
-      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg opacity-0 translate-y-8 transition-all duration-1000 delay-300 ease-out" data-animate>
         <img src="https://img.icons8.com/ios-filled/50/ffffff/whiteboard.png" alt="Tramo 3" class="w-12 h-12 mx-auto"/>
         <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Evaluación y feedback</h3>
         <p class="text-gray-300 text-sm text-center">Aprende a evaluar aprendizajes y brindar retroalimentación constructiva a tus estudiantes.</p>
       </div>
 
-      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg opacity-0 translate-y-8 transition-all duration-1000 delay-400 ease-out" data-animate>
         <img src="https://img.icons8.com/ios-filled/50/ffffff/certificate.png" alt="Tramo 4" class="w-12 h-12 mx-auto"/>
         <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Herramientas digitales</h3>
         <p class="text-gray-300 text-sm text-center">Incorpora tecnología y recursos digitales para la enseñanza de manera práctica y efectiva.</p>
       </div>
 
-      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg">
+      <div class="bg-[var(--verde-oscuro)] rounded-2xl p-6 flex flex-col gap-4 hover:scale-105 transition transform shadow-lg opacity-0 translate-y-8 transition-all duration-1000 delay-500 ease-out" data-animate>
         <img src="https://img.icons8.com/ios-filled/50/ffffff/university.png" alt="Tramo 5" class="w-12 h-12 mx-auto"/>
         <h3 class="text-xl font-semibold text-[var(--celeste)] text-center">Certificación oficial</h3>
         <p class="text-gray-300 text-sm text-center">Recibí tu certificado avalado por la Universidad de la Salud y acredita tu formación pedagógica.</p>
       </div>
+      <div>
+          <a href="https://wa.me/5491133856301" class="inline-block px-6 py-3 rounded-full bg-[var(--celeste)] text-[var(--verde-oscuro)] font-semibold shadow-lg hover:scale-105 transition transform">
+              Consulta por WhatsApp
+            </a>
+        </div>
 
     </div>
   </div>
 </section>
+
+<script>
+// Animaciones al hacer scroll (reutilizable para todas las secciones)
+const animateSections = document.querySelectorAll('[data-animate]');
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.remove('opacity-0','translate-y-8');
+    }
+  });
+},{ threshold: 0.2 });
+
+animateSections.forEach(el => sectionObserver.observe(el));
+
+// Carrusel automático del taller
+const carousel = document.getElementById('carousel');
+const slides = carousel.querySelectorAll('img');
+let currentIndex = 0;
+setInterval(() => {
+  slides[currentIndex].classList.remove('opacity-100');
+  slides[currentIndex].classList.add('opacity-0');
+  currentIndex = (currentIndex + 1) % slides.length;
+  slides[currentIndex].classList.remove('opacity-0');
+  slides[currentIndex].classList.add('opacity-100');
+}, 4000);
+</script>
+
 
 
 <!-- === SECCIÓN TESTIMONIOS === -->
@@ -562,6 +606,24 @@
 
 <!-- === CARRUSELES AUTOMÁTICOS (CORREGIDO PARA TU HTML) === -->
 <script>
+
+// animate Hero
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("[data-animate]");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0", "translate-y-8", "scale-95");
+        entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+// 
 
   const counter = document.getElementById("counter");
   let counted = false; // Para que solo cuente una vez
