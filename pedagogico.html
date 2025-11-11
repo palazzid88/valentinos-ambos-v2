@@ -35,6 +35,45 @@
 
 <body class="bg-[#0f2839] text-white font-body leading-relaxed">
 
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[var(--verde)]">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between glass">
+      <a href="#" class="flex items-center gap-3">
+        <img src="./img/logo.png" alt="Logo Valentino's Ambos" class="w-12 h-12 rounded-md object-cover">
+        <div>
+          <span class="block font-head text-lg">Valentino's Ambos</span>
+          <small class="block text-xs text-gray-300">Uniformes profesionales que acompañan tu vocación</small>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 ">
+        <a href="#beneficios" class="hover:text-white text-gray-200">Qué ofrecemos</a>
+        <a href="#rubros" class="hover:text-white text-gray-200">Rubros</a>
+        <a href="#galeria" class="hover:text-white text-gray-200">Galería</a>
+        <a href="#testimonios" class="hover:text-white text-gray-200">Testimonios</a>
+        <a href="#contacto" class="ml-2 inline-block px-4 py-2 rounded-full text-sm font-semibold bg-[var(--verde)] hover:scale-105 transform transition">Solicitar presupuesto</a>
+      </div>
+
+      <!-- Mobile menu button (simple) -->
+      <div class="md:hidden">
+        <button id="btnMenu" aria-label="Abrir menú" class="p-2 rounded-md glass">
+          <svg xmlns="" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="hidden bg-[rgba(0,0,0,0.6)]">
+      <div class="px-6 py-4 flex flex-col gap-2">
+        <a href="#beneficios" class="py-2">Qué ofrecemos</a>
+        <a href="#rubros" class="py-2">Rubros</a>
+        <a href="#galeria" class="py-2">Galería</a>
+        <a href="#testimonios" class="py-2">Testimonios</a>
+        <a href="#contacto" class="py-2 font-semibold bg-[var(--verde)] rounded-lg text-center">Solicitar presupuesto</a>
+      </div>
+    </div>
+  </header>
+
 
   <!-- HERO -->
   <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
@@ -45,10 +84,16 @@
         Carrera Docente para <span class="text-[var(--celeste)]">Profesionales</span> de la <span class="text-[var(--rosa)]">Salud</span>
       </h1>
       <p class="text-lg text-gray-200 animate__animated animate__fadeInUp animate__delay-1s">
-        Tramo Pedagógico Oficial con convenio académico entre <strong>Valentino’s Ambos</strong> y la <strong>Universidad de la Salud (ISALUD)</strong>.
+        Tramo Pedagógico Oficial con convenio académico entre <strong>Valentino’s Ambos</strong> y la <strong>Universidad FASTA</strong>.
       </p>
+      <br>
+      <!-- <img 
+      src="./img/fasta.png" 
+      alt="Equipo con uniformes profesionales"
+      class="w-12 h-auto rounded-xl shadow-lg object-cover object-center"
+      />   -->
     </div>
-  </section>
+      </section>
 
   <!-- INTRO -->
   <section class="py-16 px-6 max-w-5xl mx-auto text-center animate__animated animate__fadeInUp">
