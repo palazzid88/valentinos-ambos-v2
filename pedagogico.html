@@ -112,39 +112,41 @@
 
 <!-- Carousel Container -->
 <div class="relative max-w-md mx-auto rounded-2xl shadow-lg overflow-hidden">
-  <!-- viewport: fija la altura para que se vea UNA imagen -->
-  <div id="carouselViewport" class="w-full h-[70vh] max-h-[820px] md:h-[80vh] relative bg-transparent">
-    <!-- inner moveremos con transform -->
-    <div id="carouselInner" class="absolute inset-0 transition-transform duration-700 ease-in-out">
-      <!-- cada slide ocupa 100% del viewport -->
-      <div class="slide w-full h-full flex items-center justify-center">
+  <!-- viewport -->
+  <div id="carouselViewport" class="w-full h-[820px] md:h-[80vh] relative bg-transparent">
+    <!-- inner -->
+    <div id="carouselInner" class="absolute inset-0 transition-transform duration-700 ease-in-out flex">
+      <!-- slide 1 -->
+      <div class="slide w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="./img/pedagogicos/pedagogico1.png" alt="Tramo Pedagógico 1"
-             class="w-full h-full object-contain md:object-cover rounded-2xl">
+             class="max-w-full max-h-full object-contain rounded-2xl">
       </div>
-      <div class="slide w-full h-full flex items-center justify-center">
+      <!-- slide 2 -->
+      <div class="slide w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="./img/pedagogicos/pedagogico2.png" alt="Tramo Pedagógico 2"
-             class="w-full h-full object-contain md:object-cover rounded-2xl">
+             class="max-w-full max-h-full object-contain rounded-2xl">
       </div>
-      <div class="slide w-full h-full flex items-center justify-center">
+      <!-- slide 3 -->
+      <div class="slide w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="./img/pedagogicos/pedagogico3.png" alt="Tramo Pedagógico 3"
-             class="w-full h-full object-contain md:object-cover rounded-2xl">
+             class="max-w-full max-h-full object-contain rounded-2xl">
       </div>
     </div>
   </div>
 
   <!-- controles -->
-  <button id="prevBtn" aria-label="Anterior" class="absolute left-4 top-1/2 -translate-y-1/2 bg-[var(--verde)] hover:bg-[var(--verde-oliva)] text-white p-3 rounded-full shadow-md">
+  <button id="prevBtn" aria-label="Anterior"
+    class="absolute left-4 top-1/2 -translate-y-1/2 bg-[var(--verde)] hover:bg-[var(--verde-oliva)] text-white p-3 rounded-full shadow-md">
     ↑
   </button>
-  <button id="nextBtn" aria-label="Siguiente" class="absolute right-4 top-1/2 -translate-y-1/2 bg-[var(--verde)] hover:bg-[var(--verde-oliva)] text-white p-3 rounded-full shadow-md">
+  <button id="nextBtn" aria-label="Siguiente"
+    class="absolute right-4 top-1/2 -translate-y-1/2 bg-[var(--verde)] hover:bg-[var(--verde-oliva)] text-white p-3 rounded-full shadow-md">
     ↓
   </button>
 
-  <!-- indicadores (opcional) -->
+  <!-- indicadores -->
   <div id="dots" class="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-2"></div>
 </div>
-
-</section>
 
 
 
@@ -226,8 +228,7 @@
     <img src="img/logo.png" alt="Logo" class="mx-auto mb-6 w-40 md:w-48" />
     <div class="space-y-2">
       <!-- <p><strong>📍 Dirección:</strong> Av. Siempre Viva 123, Ciudad</p> -->
-      <p><strong>📞 Teléfono:</strong> +54 9 11 1234 5678</p>
-      <p><strong>🕒 Horario:</strong> Lunes a Viernes de 9 a 18 hs</p>
+      <p><strong>📞 Teléfono:</strong> +54 9 11 5014 1749</p>
     </div>
     <div class="flex justify-center gap-6 mt-6">
       <a href="#" class="hover:text-rojo">Instagram</a>
